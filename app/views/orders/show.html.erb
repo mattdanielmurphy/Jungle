@@ -13,29 +13,23 @@
   <table class="table table-bordered">
     <thead>
       <th>Quantity</th>
+      <th colspan='2'>Product</th>
+      <th>Description</th>
       <th>Item Total</th>
     </thead>
     <tbody>
       <% @order.line_items.each do |o| %>
+        <%product = Product.find(o.product_id)%>
         <%= render  "item",
             quantity: o.quantity,
+            product_img: product.image,
+            product_name: product.name,
+            product_desc: product.description,
             total: o.total_price_cents
         %>
       <% end %>
     </tbody>
   </table>
-
-  <!-- image, name and description
-
-  The final amount for the order
-  The email that was used
-  t.integer  "order_id"
-  t.integer  "product_id"
-  t.integer  "quantity"
-  t.integer  "item_price_cents"
-  t.integer  "total_price_cents"
-  t.datetime "created_at",        null: false
-  t.datetime "updated_at",        null: false -->
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
