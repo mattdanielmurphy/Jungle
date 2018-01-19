@@ -2,6 +2,8 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    # need to get product based on orders.
+    @product = Product.find(params[:id])
   end
 
   def create
