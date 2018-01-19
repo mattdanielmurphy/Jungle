@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.3.6', require: true
 gem 'carrierwave'
 gem 'faker'
 gem 'font-awesome-rails'
