@@ -11,11 +11,9 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: %i[create show]
-  resources :orders, only: %i[create show]
 
   namespace :admin do
     root to: 'dashboard#show'
-    resources :products, except: %i[edit update show]
     resources :products, except: %i[edit update show]
 
     resources :categories
