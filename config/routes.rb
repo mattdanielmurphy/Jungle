@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :email_users
   root to: 'products#index'
 
   resources :products, only: %i[index show]
