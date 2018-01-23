@@ -4,11 +4,11 @@ describe User, type: :model do
   describe 'Validations:' do
     before(:each) do
       @user = User.create(
-        firstname: 'Penn',
-        lastname: 'Jillette',
-        email: 'penn@mail.com',
-        password: 'pass',
-        password_confirmation: 'pass'
+        firstname: 'Famous',
+        lastname: 'Mortimer',
+        email: 'famous@mail.com',
+        password: 'strong_password',
+        password_confirmation: 'strong_password'
       )
     end
 
@@ -16,10 +16,17 @@ describe User, type: :model do
       expect(@user.valid?).to eq(true)
     end
 
-    it 'should return invalid if unmatching password & confirmation' do
-      @user.password = 'pass'
-      @user.password_confirmation = 'word'
-      expect(@user.valid?).to eq(false)
+    context 'Password:' do
+      it 'should return invalid if password & confirmation don\'t match' do
+        @user.password              = 'xxxxxxxxxxx'
+        @user.password_confirmation = 'zzzzzzzzzz'
+        expect(@user.valid?).to eq(false)
+      end
+
+      it 'should return invalid if password less than 10 characters long' do
+        @user.password = @user.password_confirmation = 'shortpass'
+        expect(@user.valid?).to eq(false)
+      end
     end
 
     it 'should return invalid if email not unique' do
