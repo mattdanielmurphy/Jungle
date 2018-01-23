@@ -57,5 +57,19 @@ describe User, type: :model do
         authenticate('wrong@email.com', 'strong_password')
       ).to be_nil
     end
+
+    context 'edge cases:' do
+      it 'should authenticate if email different case' do
+        expect(
+          authenticate('FaMouS@MaIL.COm', 'strong_password')
+        ).to_not be_nil
+      end
+
+      it 'should authenticate if email has leading/trailing spaces' do
+        expect(
+          authenticate('  famous@mail.com   ', 'strong_password')
+        ).to_not be_nil
+      end
+    end
   end
 end
