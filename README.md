@@ -1,11 +1,10 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
-
+Jungle is a small e-commerce application built with Ruby on Rails 4.2.
 
 ## Setup
 
-1. Fork & Clone
+1. Clone this repository.
 2. Run `bundle install` to install dependencies
 3. Create `config/database.yml` by copying `config/database.example.yml`
 4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
