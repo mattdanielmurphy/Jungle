@@ -1,6 +1,29 @@
 # Jungle
 
-Jungle is a small e-commerce application built with Ruby on Rails 4.2.
+Jungle is a small e-commerce application with admin authentication built with Ruby on Rails 4.2 and Stripe.
+
+## Screenshots
+
+### Products Index
+![Products Index](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/products-index.png)
+
+### Product Category: Apparel
+![Product Category: Apparel](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/product-category-apparel.png)
+
+### Product Category: Electronics
+![Product Category: Electronics](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/product-category-electronics.png)
+
+### Cart
+![Cart](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/cart.png)
+
+### Checkout
+![Checkout](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/checkout.png)
+
+### Admin Authentication
+![Admin Authentication](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/admin-authentication.png)
+
+### Admin Product Page
+![Admin Product Page](https://github.com/mattdanielmurphy/jungle-rails/blob/master/screenshots/admin-product-page.png)
 
 ## Setup
 
